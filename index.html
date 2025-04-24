@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <title>Jogos Educativos</title>
+
+  <!-- Fonte Fredoka do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive;
+      font-family: 'Fredoka', sans-serif;
       background: linear-gradient(to right, #ffcc00, #ff9900);
       height: 100vh;
       display: flex;
@@ -17,7 +20,7 @@
 
     .card-container {
       display: flex;
-      gap: 30px; /* Espaço entre os cards */
+      gap: 30px;
     }
 
     .start-card {
@@ -27,11 +30,17 @@
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      width: 300px; /* Largura fixa para padronizar */
-      min-height: 250px; /* Altura mínima para deixar igual */
+      width: 300px;
+      min-height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    .start-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
     .start-card h2 {
@@ -64,26 +73,25 @@
 <body>
   <div class="card-container">
     <div class="start-card">
-      <img src="imagens/palavras.png">
+      <img src="imagens/palavras.png" alt="Jogo Formar Palavras">
       <h2>Jogo Formar Palavras</h2>
       <p>Utilize as letras para formar a palavra correta!</p>
       <button onclick="window.location.href='formarPalavras.html'">Começar</button>
     </div>
 
     <div class="start-card">
-      <img src="imagens/plurais.png">
+      <img src="imagens/plurais.png" alt="Jogo dos Plurais">
       <h2>Jogo dos Plurais</h2>
       <p>Descubra o plural correto para cada imagem!</p>
       <button onclick="window.location.href='plural.html'">Começar</button>
     </div>
 
     <div class="start-card">
-      <img src="imagens/quiz.png"
-      <h2>Quiz de Matematica</h2>
+      <img src="imagens/quiz.png" alt="Quiz de Matemática">
+      <h2>Quiz de Matemática</h2>
       <p>Responda o máximo de perguntas possíveis e teste sua capacidade!</p>
       <button onclick="window.location.href='quizmatematica.html'">Começar</button>
     </div>
   </div>
 </body>
-
 </html>
