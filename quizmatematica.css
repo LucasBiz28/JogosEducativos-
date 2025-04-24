@@ -1,0 +1,66 @@
+/* Estiliza o corpo da página */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte divertida */
+  background: linear-gradient(to top, #fceabb, #f8b500); /* Fundo degradê amarelo/dourado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa a altura inteira da tela */
+}
+
+/* Container principal do quiz */
+.quiz-container {
+  background: white; /* Fundo branco para destaque */
+  padding: 30px;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  width: 400px;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Título do quiz */
+h1 {
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Pergunta exibida */
+.question {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Estilo dos botões de resposta */
+.answers button {
+  display: block; /* Cada botão ocupa uma linha */
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #fdbc7e; /* Cor laranja clara */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; /* Suaviza efeitos ao passar o mouse */
+}
+
+/* Efeito hover ao passar o mouse nas alternativas */
+.answers button:hover {
+  background: #ff6600; /* Laranja mais escuro ao passar o mouse */
+}
+
+/* Estilo do botão "Próxima" */
+#next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff9100; /* Cor viva para destacar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Escondido até uma resposta ser escolhida */
+}
+
+/* Estilo do texto de resultado */
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+}

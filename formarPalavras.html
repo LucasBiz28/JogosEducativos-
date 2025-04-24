@@ -1,0 +1,74 @@
+<!DOCTYPE html><!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br"><!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"><!-- Define a codificação de caracteres para suportar acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Essa tag é usada para tornar a página web responsiva em dispositivos móveis. 
+    Ela define como o conteúdo deve ser dimensionado e exibido nas diferentes larguras de tela.-->
+
+    <title>Forma Palavras</title><!-- Título exibido na aba do navegador -->
+
+    <!-- Fonte divertida para dar um visual mais lúdico ao jogo -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS externo (onde ficam os estilos do jogo) -->
+    <link rel="stylesheet" href="formarPalavras.css">
+</head>
+
+<body>
+    <!-- Título do jogo -->
+    <h1>Forma Palavras</h1>
+
+    <!-- Container principal do jogo -->
+    <div id="game-container">
+        <!-- Espaço onde o jogador monta a palavra arrastando letras -->
+        <div id="word-slot"></div>
+
+        <!-- Área onde ficam as letras embaralhadas -->
+        <div id="letter-bank"></div>
+
+        <!-- Botão para o jogador verificar se montou a palavra certa -->
+        <button onclick="checkAnswer()">Verificar</button>
+
+        <!-- Botão para reembaralhar as letras disponíveis -->
+        <button id="embaralhar-btn"> Embaralhar Letras</button>
+
+        <!-- Mostra se o jogador acertou ou errou a palavra -->
+        <p id="feedback"></p>
+
+        <!-- Exibe a pontuação atual -->
+        <p id="score">Pontuação: 0</p>
+
+        <!-- Indica o progresso (fase atual e número da palavra) -->
+        <p id="progress">Fase 1 - Palavra 1/5</p>
+    </div>
+
+    <!-- Modal exibido quando uma fase é concluída -->
+    <div id="fase-concluida" style="display: none;">
+        <img src="imagens/fase-concluida.png" alt="Fase Concluída">
+    </div>
+
+    <!-- Tela final exibida quando todas as fases são completadas -->
+    <div id="fim-jogo" style="display: none;">
+        <h2>Parabéns! Você completou todas as fases!</h2>
+        <p id="pontuacao-final"></p>
+        <button onclick="reiniciarJogo()">Jogar Novamente</button>
+    </div>
+
+    <!-- Áudios para efeitos sonoros -->
+    <audio id="correct-sound" src="sons/acerto.mp3"></audio> <!-- Som de acerto -->
+
+    <audio id="error-sound" src="sons/erro.mp3"></audio> <!-- Som de erro -->
+
+    <audio id="next-sound" src="sons/fase.mp3"></audio> <!-- Som de mudança de fase -->
+
+    <audio id="win-sound" src="sons/fim.mp3"></audio> <!-- Som de vitória final -->
+
+    <!-- Importa o arquivo JavaScript com a lógica do jogo -->
+    <script src="formarPalavras.js"></script>
+</body>
+
+</html>
+
+<!--Feito por Lucas Biz Pavesi-->

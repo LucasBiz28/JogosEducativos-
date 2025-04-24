@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Suporte a caracteres acentuados -->
+  <title>Jogo de Palavras - Plural</title> <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="plural.css"> <!-- Importa o arquivo de estilos CSS -->
+</head>
+
+<body>
+  <!-- Container principal do jogo -->
+  <div class="game-container">
+
+    <!-- Exibição da pontuação atual -->
+    <div id="pontuacao">Pontuação: 0</div>
+
+    <!-- Exibição da fase atual -->
+    <div id="fase">Fase: 1</div>
+
+    <!-- Título do jogo -->
+    <h1>Jogo de Palavras!</h1>
+
+    <!-- Instrução para o jogador -->
+    <p>Digite o plural da palavra abaixo:</p>
+
+    <!-- Container da imagem associada à palavra -->
+    <div id="image-container" class="image-container" style="position: relative;">
+      <img id="word-image" src="" alt="Imagem da palavra" />
+      <!-- A imagem será definida dinamicamente pelo JavaScript -->
+    </div>
+
+    <!-- Palavra base (no singular) será exibida aqui -->
+    <h2 id="word-text"></h2>
+
+    <!-- Campo para o jogador digitar a resposta -->
+    <input type="text" id="answer-input" placeholder="Digite o plural aqui">
+
+    <!-- Botão que chama a função verificarResposta() quando clicado -->
+    <button onclick="verificarResposta()">Verificar</button>
+
+    <!-- Local onde será mostrado o feedback (acerto ou erro) -->
+    <p id="feedback"></p>
+  </div>
+
+  <!-- Tela de transição entre fases (inicialmente oculta com classe "hidden") -->
+  <div id="fase-transition" class="hidden">
+    <img src="imagens/fase-concluida.png" alt="Fase concluída"> <!-- Imagem de fase concluída -->
+    <h2>Fase <span id="numero-fase"></span> Concluída!</h2> <!-- Texto dinâmico com o número da fase -->
+  </div>
+
+  <!-- Importa o script JavaScript que contém a lógica do jogo -->
+  <script src="plural.js"></script>
+</body>
+
+</html>
+
+<!--Feito por Lucas Biz Pavesi-->

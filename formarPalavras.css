@@ -1,0 +1,153 @@
+/* Define a fonte padrão e aplica um fundo com gradiente suave */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to top, #fceabb, #f8b500); /* Gradiente amarelo */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza o título principal do jogo */
+h1 {
+  color: black;
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+/* Container geral do jogo */
+#game-container {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  width: fit-content;
+  max-width: 95vw;
+  overflow-x: auto;
+}
+
+/* Área onde o jogador solta as letras */
+#word-slot {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Estiliza os espaços vazios onde as letras serão encaixadas */
+.drop-slot {
+  width: 60px;
+  height: 60px;
+  border: 3px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  font-size: 2rem;
+}
+
+/* Área onde ficam as letras disponíveis para arrastar */
+#letter-bank {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo dos blocos/letras arrastáveis */
+.letter-card {
+  background-color: #ffa500;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Estilo geral dos botões */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffa500;
+  color: white;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Cor de destaque quando o botão é passado o mouse */
+button:hover {
+  background-color: #ff8c00;
+}
+
+/* Tela/modal que aparece quando uma fase é concluída */
+#fase-concluida {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.8s ease-in-out;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Tamanho da imagem dentro do modal de fase concluída */
+#fase-concluida img {
+  width: 300px;
+}
+
+/* Tela final exibida após vencer todas as fases */
+#fim-jogo {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Animação suave de fade-in (usada no modal de fase concluída) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Estilo específico para o botão de embaralhar letras */
+#embaralhar-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Efeito de hover para o botão de embaralhar */
+#embaralhar-btn:hover {
+  background-color: #ff8c00;
+}

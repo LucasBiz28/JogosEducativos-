@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Interativo</title>
+
+  <!-- Link para o arquivo CSS externo para estilizar o quiz -->
+  <link rel="stylesheet" href="quizmatematica.css">
+
+  <!-- Você pode adicionar estilos CSS direto aqui se quiser -->
+  <style>
+    /* CSS direto na página (opcional) */
+  </style>
+</head>
+<body>
+
+  <!-- Container principal do quiz -->
+  <div class="quiz-container">
+    <h1>Quiz de Matemática</h1>
+
+    <!-- Área onde o quiz será carregado -->
+    <div id="quiz">
+      <!-- Elemento onde a pergunta será exibida -->
+      <div class="question" id="question">Carregando pergunta...</div>
+
+      <!-- Elemento onde as alternativas serão colocadas dinamicamente -->
+      <div class="answers" id="answers"></div>
+
+      <!-- Botão para passar para a próxima pergunta -->
+      <button id="next-btn">Próxima</button>
+
+      <!-- Elemento para exibir o resultado final -->
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- Inclusão do script JavaScript com a lógica do quiz -->
+  <script src="quizmatematica.js"></script>
+
+</body>
+</html>
+
+<!--Feito por Isaac-->
